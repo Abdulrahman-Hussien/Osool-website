@@ -72,7 +72,7 @@
     .text-heading {
       margin-bottom: 30px;
       color: white;
-      font-size: 60px;
+      font-size: 80px;
       line-height: 60px;
       font-weight: 300;
       letter-spacing: 4px;
@@ -113,12 +113,25 @@
       padding-bottom: 35px;
       display: grid;
     }
-    
+
     .footer-columns {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 50px;
+      margin-bottom: 15px;
     }
+
+    .social-link {
+      display: block;
+      margin-bottom: 6px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgb(213, 213, 224);
+      color: rgb(102, 140, 173);
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: none;
+    }
+
   </style>
 </head>
 
@@ -139,20 +152,29 @@
   </div>
 
   <div>Services</div>
-  
+
   <div>Our customers</div>
-  
+
   <div class="footer-container">
     <div class="footer-columns">
       <div>
         <h1>About us</h1>
-        <p>Osool is a leading tech company in the MENA region. We offer BI solutions tailored to the clients needs</p>
+        <p class="footer-about-us">Osool is a leading technology company in the MENA region, specializing in delivering customized Business
+          Intelligence (BI) solutions that meet the unique needs of our clients.</p>
       </div>
       <div>
         <h1>Useful links</h1>
       </div>
       <div>
         <h1>Social</h1>
+        <a href="https://facebook.com" class="social-link" target="_blank"><img src="assets/facebook-logo.svg"
+            width="20" style="margin-right: 5px;">Facebook</a>
+
+        <a href="https://www.linkedin.com/" target="_blank" class="social-link"><img src="assets/linkedin-logo.png"
+            width="20" style="margin-right: 5px;">Linkdin</a>
+
+        <a href="mailto:" target="_blank" class="social-link"><img src="assets/email.png" width="20"
+            style="margin-right: 5px;">Mail</a>
       </div>
     </div>
     <div style="text-align: center;">Copyright © 2024 OSOOL. All rights reserved.</div>
