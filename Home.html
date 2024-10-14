@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Osool IT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: rgb(106, 133, 156);
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    .container {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .header-name {
+      box-sizing: border-box;
+      display: inline;
+      text-size-adjust: 100%;
+      font-family: "Open Sans", sans-serif;
+      color: rgb(105, 185, 255);
+      font-size: 30px;
+      line-height: 25px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .navigation-menu {
+      text-align: right;
+    }
+
+    .navigation-link {
+      display: inline;
+      transition-property: all;
+      transition-duration: 300ms;
+      transition-timing-function: ease-in-out;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+    .navigation-link:hover {
+      color: rgb(46, 157, 255);
+    }
+
+    .center-section {
+      padding-top: 300px;
+      padding-bottom: 300px;
+      border-bottom: 4px solid rgb(105, 185, 255);
+      background-image: linear-gradient(rgba(46, 157, 255, 0.5), rgba(46, 157, 255, 0.22)), url("assets/background.jpg");
+      background-position: 0% 0%, 50% 50%;
+      background-size: auto;
+      text-align: center;
+    }
+
+    .text-heading {
+      margin-bottom: 30px;
+      color: white;
+      font-size: 60px;
+      line-height: 60px;
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .learn-more-button {
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+      padding: 10px 30px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgba(255, 255, 255, 0.784);
+      border-radius: 4px;
+      transition-property: background-color, border, color;
+      transition-duration: 300ms, 300ms, 300ms;
+      transition-timing-function: ease, ease, ease;
+      color: rgba(255, 255, 255, 0.784);
+      line-height: 21px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .learn-more-button:hover {
+      border-color: rgb(46, 157, 255);
+      color: rgb(46, 157, 255);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a class="header-name">Osool</a>
+    <div class="navigation-menu">
+      <a class="navigation-link">Home</a>
+      <a class="navigation-link">About us</a>
+    </div>
+  </div>
+
+  <div class="center-section">
+    <span class="text-heading">Data-Driven Innovation for Tomorrow</span>
+    <div>
+      <a href="about-us.html" class="learn-more-button">Learn more</a>
+    </div>
+  </div>
+</body>
+
+</html>
