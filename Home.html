@@ -16,6 +16,16 @@
       padding-top: 40px;
     }
 
+    a,
+    a:link,
+    a:visited,
+    a:focus,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
     .container {
       top: 0;
       position: fixed;
@@ -38,6 +48,7 @@
       font-weight: 300;
       letter-spacing: 4px;
       text-transform: uppercase;
+      text-decoration: none;
     }
 
     .navigation-menu {
@@ -45,12 +56,14 @@
     }
 
     .navigation-link {
+      color: rgb(106, 133, 156);
       display: inline;
       transition-property: all;
       transition-duration: 300ms;
       transition-timing-function: ease-in-out;
       padding: 20px;
       cursor: pointer;
+      text-decoration: none;
     }
 
     .navigation-link:hover {
@@ -105,6 +118,75 @@
       color: rgb(46, 157, 255);
     }
 
+    @keyframes slideInFromBottom {
+      0% {
+        transform: translateY(100%);
+        /* Start position (below the screen) */
+        opacity: 0;
+        /* Start invisible */
+      }
+
+      100% {
+        transform: translateY(0);
+        /* End position (original position) */
+        opacity: 1;
+        /* Fully visible */
+      }
+    }
+
+    /* Base state */
+    .slide-in {
+      opacity: 0;
+      /* Keep elements hidden before the animation starts */
+    }
+
+    /* Apply the animation to the element */
+    .animate {
+      animation: slideInFromBottom 1.5s ease-out;
+      /* 1s duration and ease-out timing */
+    }
+
+    .section-heading {
+      margin-top: 50px;
+      color: rgb(103, 103, 112);
+      font-size: 40px;
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 50px;
+    }
+
+    .white-box {
+      padding: 12px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(220, 235, 247);
+      border-radius: 5px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .white-box:hover {
+      box-shadow: rgba(46, 157, 255, 0.2) 0px 0px 0px 1px;
+    }
+
+    .grid-image {
+      display: block;
+      width: 30%;
+      margin: 10px auto;
+      padding: 20px;
+    }
+
+    .card-description {
+      padding: 15px;
+    }
+
     .footer-container {
       background-color: rgb(237, 239, 242);
       margin-top: 20px;
@@ -131,16 +213,15 @@
       font-weight: 300;
       text-decoration: none;
     }
-
   </style>
 </head>
 
 <body>
   <div class="container js-container">
-    <a class="header-name">Osool</a>
+    <a class="header-name" href="home.html">Osool</a>
     <div class="navigation-menu">
-      <a class="navigation-link">Home</a>
-      <a class="navigation-link">About us</a>
+      <a class="navigation-link" href="home.html">Home</a>
+      <a class="navigation-link" href="about-us.html">About us</a>
     </div>
   </div>
 
@@ -151,7 +232,27 @@
     </div>
   </div>
 
-  <div>Services</div>
+  <h2 class="section-heading">WHAT WE DO</h2>
+  <div class="services-container slide-in">
+    <div class="white-box">
+      <img class="grid-image" src="assets/hardware-icon-9.png">
+      <h3>High-Tech Applications</h3>
+      <p class="card-description">Osool specializes in desgining and implementing cutting-edge, fully customized
+        applications tailored to meet the customer's unique needs to accelerate business growth and drive sustainable
+        success.</p>
+    </div>
+    <div class="white-box">
+      <img class="grid-image" src="assets/stock.png" style="padding-bottom: 29px;">
+      <h3>Data-Driven Improvements</h3>
+      <p class="card-description">Our services provide real-time business improvements driven by data analytics, market
+        research, and advanced technology solutions. Delivered by a team of experts in the field of data analysis.</p>
+    </div>
+    <div class="white-box">
+      <img class="grid-image" src="assets/deal.png">
+      <h3>Technical Support & Consultation</h3>
+      <p class="card-description">Osool provides ongoing support and consultation to ensure our customers' success long after implementation.</p>
+    </div>
+  </div>
 
   <div>Our customers</div>
 
@@ -159,7 +260,8 @@
     <div class="footer-columns">
       <div>
         <h1>About us</h1>
-        <p class="footer-about-us">Osool is a leading technology company in the MENA region, specializing in delivering customized Business
+        <p class="footer-about-us">Osool is a leading technology company in the MENA region, specializing in delivering
+          customized Business
           Intelligence (BI) solutions that meet the unique needs of our clients.</p>
       </div>
       <div>
@@ -180,7 +282,22 @@
     <div style="text-align: center;">Copyright © 2024 OSOOL. All rights reserved.</div>
   </div>
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const targetElements = document.querySelectorAll('.slide-in');
 
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate'); // Add animation trigger class
+            entry.target.classList.remove('slide-in');
+          }
+        });
+      });
+
+      targetElements.forEach((element) => {
+        observer.observe(element); // Observe each element
+      });
+    });
   </script>
 </body>
 
