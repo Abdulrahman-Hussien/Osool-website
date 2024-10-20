@@ -14,6 +14,7 @@
       font-size: 18px;
       line-height: 20px;
       padding-top: 40px;
+      margin: 0;
     }
 
     a,
@@ -71,7 +72,7 @@
     }
 
     .center-section {
-      margin-top: 15px;
+      margin-top: 30px;
       padding-top: 305px;
       padding-bottom: 250px;
       border-bottom: 1px solid rgb(105, 185, 255);
@@ -156,10 +157,11 @@
       text-transform: uppercase;
     }
 
-    .services-container {
+    .what-we-do-container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 50px;
+      margin: 20px;
     }
 
     .white-box {
@@ -187,10 +189,41 @@
       padding: 15px;
     }
 
+    .customers-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+    }
+
+    .customers-header {
+      font-weight: bold;
+      text-align: right;
+      color: black;
+      margin: 20px;
+    }
+
+    .customers-text {
+      color: black;
+      font-size: 20px;
+      text-align: right;
+      margin: 20px;
+    }
+
+    .customers-logo {
+      display: grid;
+      
+    }
+
+    .logo-image {
+      margin: 20px;
+      margin-top: 60px;
+      width: 30%;
+    }
+
     .footer-container {
       background-color: rgb(237, 239, 242);
       margin-top: 20px;
-      padding-left: 5px;
+      padding-left: 15px;
       padding-right: 5px;
       padding-bottom: 35px;
       display: grid;
@@ -233,7 +266,7 @@
   </div>
 
   <h2 class="section-heading">WHAT WE DO</h2>
-  <div class="services-container slide-in">
+  <div class="what-we-do-container slide-in">
     <div class="white-box">
       <img class="grid-image" src="assets/hardware-icon-9.png">
       <h3>High-Tech Applications</h3>
@@ -250,11 +283,25 @@
     <div class="white-box">
       <img class="grid-image" src="assets/deal.png">
       <h3>Technical Support & Consultation</h3>
-      <p class="card-description">Osool provides ongoing support and consultation to ensure our customers' success long after implementation.</p>
+      <p class="card-description">Osool provides ongoing support and consultation services to ensure our customers'
+        success long after implementation.</p>
     </div>
   </div>
 
-  <div>Our customers</div>
+  <div class="services-container-background">
+    <h1 class="section-heading">Projects</h1>
+  </div>
+
+  <div class="customers-container">
+    <div>
+      <h1 class="customers-header">Our Customers</h1>
+      <p class="customers-text">We are confident we can find the process that will best help you meet your goals. Our tailored solutions are designed to adapt to your unique needs, ensuring sustainable growth and success.</p>
+    </div>
+    <div class="customers-logos">
+        <img class="logo-image" src="assets/GSK_logo_2022.svg.png">
+        <img class="logo-image" style="width: 40%; margin-left: 70px;" src="assets/H_MasterLogo_Colour_POS_RGB.png">
+    </div>
+  </div>
 
   <div class="footer-container">
     <div class="footer-columns">
@@ -288,8 +335,10 @@
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate'); // Add animation trigger class
-            entry.target.classList.remove('slide-in');
+            setTimeout(() => {
+              entry.target.classList.add('animate'); // Add animation trigger class
+              entry.target.classList.remove('slide-in');
+            }, 500);
           }
         });
       });
