@@ -234,19 +234,21 @@ a:active {
   font-weight: bold;
   text-align: right;
   color: black;
-  margin: 20px;
+  font-size: 60px;
+  margin: 2%;
+  padding: 20px;
 }
 
 .customers-text {
   color: black;
-  font-size: 20px;
+  font-size: 25px;
+  line-height: 25px;
   text-align: right;
   margin: 20px;
 }
 
 .customers-logo {
   display: grid;
-
 }
 
 .logo-image {
