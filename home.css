@@ -1,0 +1,282 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(106, 133, 156);
+  font-size: 18px;
+  line-height: 20px;
+  padding-top: 40px;
+  margin: 0;
+}
+
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navigation-container {
+  top: 0;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.748);
+  transition: background-color 0.3s ease;
+  padding: 20px;
+  padding-bottom: 0px;
+  padding-top: 15px;
+  display: grid;
+  width: 98%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header-name {
+  box-sizing: border-box;
+  display: inline;
+  text-size-adjust: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(105, 185, 255);
+  font-size: 30px;
+  line-height: 25px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navigation-menu {
+  text-align: right;
+  padding-top: 5%;
+}
+
+.navigation-link {
+  font-size: 25px;
+  color: rgb(106, 133, 156);
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  padding: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navigation-link:hover {
+  color: rgb(46, 157, 255);
+}
+
+.osool-logo img {
+  width: 15%;
+  padding-left: 10px;
+}
+
+.center-section {
+  box-sizing: border-box;
+  margin-top: 7%;
+  padding-top: 305px;
+  padding-bottom: 250px;
+  border-bottom: 1px solid rgb(105, 185, 255);
+  background-image: linear-gradient(rgba(46, 157, 255, 0.5), rgba(46, 157, 255, 0.22)), url("assets/background.jpg");
+  background-position: 0% 0%, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.text-heading {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 80px;
+  line-height: 60px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.learn-more-button {
+  display: inline-block;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.784);
+  border-radius: 4px;
+  transition-property: background-color, border, color;
+  transition-duration: 300ms, 300ms, 300ms;
+  transition-timing-function: ease, ease, ease;
+  color: rgba(255, 255, 255, 0.784);
+  line-height: 21px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.learn-more-button:hover {
+  border-color: rgb(46, 157, 255);
+  color: rgb(46, 157, 255);
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    /* Start position (below the screen) */
+    opacity: 0;
+    /* Start invisible */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* End position (original position) */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+/* Base state */
+.slide-in {
+  opacity: 0;
+  /* Keep elements hidden before the animation starts */
+}
+
+/* Apply the animation to the element */
+.animate {
+  animation: slideInFromBottom 1.2s ease-out;
+  /* 1s duration and ease-out timing */
+}
+
+.section-heading,
+.projects-heading {
+  margin-top: 50px;
+  color: rgb(103, 103, 112);
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.what-we-do-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  margin: 20px;
+}
+
+.white-box {
+  padding: 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(220, 235, 247);
+  border-radius: 5px;
+  background-color: white;
+  text-align: center;
+}
+
+.white-box:hover {
+  box-shadow: rgba(46, 157, 255, 0.2) 0px 0px 0px 1px;
+}
+
+.grid-image {
+  display: block;
+  width: 30%;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.card-description {
+  padding: 15px;
+}
+
+.projects-background {
+  background-color: rgb(7, 56, 85);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding:10px;
+}
+
+.projects-heading {
+  color: white;
+  font-weight: 650;
+  margin-top: 40px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 20px;
+  justify-content: space-between;
+  column-gap: 20px;
+  padding: 20px;
+}
+
+.project-column img {
+  max-width: 100%;
+  height: auto;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.project-title {
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.customers-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.customers-header {
+  font-weight: bold;
+  text-align: right;
+  color: black;
+  margin: 20px;
+}
+
+.customers-text {
+  color: black;
+  font-size: 20px;
+  text-align: right;
+  margin: 20px;
+}
+
+.customers-logo {
+  display: grid;
+
+}
+
+.logo-image {
+  margin: 5%;
+  width: 30%;
+}
+
+.footer-container {
+  background-color: rgb(237, 239, 242);
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 5px;
+  padding-bottom: 35px;
+  display: grid;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  margin-bottom: 15px;
+}
+
+.social-link {
+  display: block;
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(213, 213, 224);
+  color: rgb(102, 140, 173);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
