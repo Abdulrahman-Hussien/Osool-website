@@ -249,11 +249,19 @@ a:active {
 
 .customers-logo {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto auto;
+}
+
+.custmoers-logo-box {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  margin: 5%;
 }
 
 .logo-image {
-  margin: 5%;
-  width: 30%;
+  width: 60%;
 }
 
 .footer-container {
