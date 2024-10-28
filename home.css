@@ -190,7 +190,7 @@ a:active {
 }
 
 .projects-background {
-  background-color: rgb(7, 56, 85);
+  background-color: rgb(5, 75, 116);
   margin-top: 30px;
   margin-bottom: 30px;
   padding:10px;
@@ -211,17 +211,28 @@ a:active {
   padding: 20px;
 }
 
+.project-column {
+  display: flex;
+  align-items: center;
+}
+
 .project-column img {
   max-width: 100%;
   height: auto;
   padding-right: 20px;
-  box-sizing: border-box;
 }
 
 .project-title {
   color: white;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.project-description {
+  color: white;
+  font-size: 20px;
+  line-height: 25px;
+  padding-top: 10px;
 }
 
 .customers-container {
@@ -278,6 +289,12 @@ a:active {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 50px;
   margin-bottom: 15px;
+}
+
+.footer-osool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-link {

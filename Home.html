@@ -57,7 +57,19 @@
       </div>
       <div>
         <h2 class="project-title">Sales-Flow Application</h2>
-        <p class="project-descritption"></p>
+        <p class="project-description">Osool developed a comprehensive system to monitor and manage the entire sales
+          cycle for its clients, ensuring a seamless flow from data collection to actionable insights. The process
+          begins with a robust backend application that gathers data from various sources, laying the groundwork for an
+          intelligent, interconnected system.<span id="moreText" style="display: none;">This data is stored in a perfectly designed database, built with an
+          efficient architecture that prioritizes accessibility and minimizes query response time, ensuring swift data
+          retrieval and smooth operations.</span></p>
+        <p class="project-description"><span id="moreText" style="display: none;">
+          To transform raw data into meaningful insights, Osool uses Power BI to conduct in-depth data analysis. Through
+          customized dashboards, Osool visualizes key metrics and trends, providing clients with clear, actionable
+          insights to drive better business decisions. Each dashboard is tailored to meet specific business needs,
+          offering a dynamic view of performance metrics that empower clients to optimize strategies and enhance overall
+          efficiency.</span></p>
+          <button onclick="toggleText()" id="learnMoreBtn">Learn More</button>
       </div>
     </div>
   </div>
@@ -92,8 +104,8 @@
           customized Business
           Intelligence (BI) solutions that meet the unique needs of our clients.</p>
       </div>
-      <div>
-        <h1>Useful links</h1>
+      <div class="footer-osool">
+        <img src="assets/Osool-New-logo-customized.png" style="width: 60%;">
       </div>
       <div>
         <h1>Social</h1>
@@ -128,6 +140,19 @@
         observer.observe(element); // Observe each element
       });
     });
+
+    function toggleText() {
+      const moreText = document.getElementById("moreText");
+      const btnText = document.getElementById("learnMoreBtn");
+
+      if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        btnText.innerHTML = "Show Less";
+      } else {
+        moreText.style.display = "none";
+        btnText.innerHTML = "Learn More";
+      }
+    }
   </script>
 </body>
 
