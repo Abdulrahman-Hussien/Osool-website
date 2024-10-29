@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+li {
+  padding-bottom: 15px;
+}
+
 a,
 a:link,
 a:visited,
@@ -193,7 +197,7 @@ a:active {
   background-color: rgb(5, 75, 116);
   margin-top: 30px;
   margin-bottom: 30px;
-  padding:10px;
+  padding: 10px;
 }
 
 .projects-heading {
@@ -229,10 +233,32 @@ a:active {
 }
 
 .project-description {
-  color: white;
-  font-size: 20px;
-  line-height: 25px;
-  padding-top: 10px;
+  color: rgb(227, 227, 227);
+  font-size: 1.1rem;
+  line-height: 29px;
+}
+
+.learnMoreBtn {
+  font-size: 1.5rem;
+  font-weight: 450;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.748);
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.808);
+  background-color: transparent;
+  display: block;
+  margin: auto;
+  transition-property: background-color, border, color;
+  transition-duration: 300ms, 300ms, 300ms;
+  transition-timing-function: ease, ease, ease;
+}
+
+.learnMoreBtn:hover {
+  color: rgb(46, 157, 255);
+  border-color: rgb(46, 157, 255);
 }
 
 .customers-container {
@@ -266,8 +292,8 @@ a:active {
 
 .custmoers-logo-box {
   display: flex;
-  align-items:center;
-  justify-content:center;
+  align-items: center;
+  justify-content: center;
   margin: 5%;
 }
 
