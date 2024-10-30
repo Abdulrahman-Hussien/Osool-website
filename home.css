@@ -84,6 +84,7 @@ a:active {
   background-size: auto, cover;
   background-repeat: no-repeat;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .text-heading {
@@ -231,6 +232,7 @@ a:active {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 50px;
   margin: 20px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .white-box {
@@ -241,10 +243,7 @@ a:active {
   border-radius: 5px;
   background-color: white;
   text-align: center;
-}
-
-.white-box:hover {
-  box-shadow: rgba(46, 157, 255, 0.2) 0px 0px 0px 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .grid-image {
@@ -259,10 +258,11 @@ a:active {
 }
 
 .projects-background {
-  background-color: rgb(5, 75, 116);
+  background: linear-gradient(135deg, rgb(5, 75, 116), rgb(2, 45, 70));
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
 .projects-heading {
@@ -304,8 +304,9 @@ a:active {
 }
 
 .discover-project-button {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 450;
+  padding: 5px;
   cursor: pointer;
   border-style: solid;
   border-width: 1px;
