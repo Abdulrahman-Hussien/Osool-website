@@ -22,12 +22,12 @@
   <div class="center-section">
     <span class="text-heading">Data-Driven Innovation for Tomorrow</span>
     <div>
-      <a href="about-us.html" class="learn-more-button">Learn more</a>
+      <a href="about-us.html" class="learn-more-button">About Osool</a>
     </div>
   </div>
 
   <h2 class="section-heading">WHAT WE DO</h2>
-  <div class="what-we-do-container slide-in">
+  <div class="what-we-do-container slide-in-bottom">
     <div class="white-box">
       <img class="grid-image" src="assets/hardware-icon-9.png">
       <h3>High-Tech Applications</h3>
@@ -57,7 +57,7 @@
       </div>
       <div>
         <h2 class="project-title">Sales-Flow Application</h2>
-        <div class="project-description">
+        <div class="project-description slide-in-left">
           <p>Osool's innovative system is designed to manage and streamline the entire
             sales cycle, transforming raw data into actionable insights. This system is built with a focus on
             efficiency,
@@ -70,8 +70,25 @@
               sales cycle, ensuring a seamless flow from data collection to actionable insights.</li>
 
             <li><strong>Backend Data Collection</strong>: The system begins with a robust backend application that gathers data from various sources</li></ul>
-            <a href="projects.html"><button class="learnMoreBtn">Discover our Sales-Flow Application</button></a>
+            <a href="projects.html#Sales_Flow"><button class="discover-project-button">Discover our Sales-Flow Application</button></a>
         </div>
+      </div>
+    </div>
+    <div class="projects-container" style="grid-template-columns: 60% 40%;">
+      <div>
+        <h2 class="project-title">TAP Application</h2>
+        <div class="project-description slide-in-right">
+          <p>Osool's application offers a seamless, automated solution for managing e-invoices, particularly designed to comply with the Egyptian Tax Portal requirements. This powerful system simplifies invoice processing, validation, and database organization, enhancing efficiency and accuracy for clients.</p>
+
+    <ul>
+      <li><strong>Automatic E-Invoice Transformation</strong>: The application can transform traditional invoices into e-invoices automatically, converting them to a digital format that aligns with tax regulations.</li>
+      
+      <li><strong>Direct Integration with Egyptian Tax Portal</strong>: Once the invoices are converted, the application directly connects to the Egyptian Tax Portal to submit the e-invoices for validation, ensuring compliance with local tax laws.</li>
+            <a href="projects.html#TAP"><button class="discover-project-button">Discover our TAP Application</button></a>
+        </div>
+      </div>
+      <div class="project-column">
+        <img src="assets/project2-icon.jpg">
       </div>
     </div>
   </div>
@@ -82,7 +99,7 @@
       <p class="customers-text">We are confident we can find the process that will best help you meet your goals. Our
         tailored solutions are designed to adapt to your unique needs, ensuring sustainable growth and success.</p>
     </div>
-    <div class="customers-logo slide-in">
+    <div class="customers-logo slide-in-bottom">
       <div class="custmoers-logo-box">
         <img class="logo-image" src="assets/GSK_logo_2022.svg.png">
       </div>
@@ -125,14 +142,14 @@
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const targetElements = document.querySelectorAll('.slide-in');
+      const targetElements = document.querySelectorAll('.slide-in-bottom');
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.classList.add('animate'); // Add animation trigger class
-              entry.target.classList.remove('slide-in');
+              entry.target.classList.add('animate-from-bottom'); // Add animation trigger class
+              entry.target.classList.remove('slide-in-bottom');
             }, 500);
           }
         });
@@ -143,18 +160,62 @@
       });
     });
 
-    function toggleText() {
-      const moreText = document.getElementById("moreText");
-      const btnText = document.getElementById("learnMoreBtn");
+    document.addEventListener("DOMContentLoaded", function () {
+      const targetElements = document.querySelectorAll('.slide-in-left');
 
-      if (moreText.style.display === "none") {
-        moreText.style.display = "inline";
-        btnText.innerHTML = "Show Less";
-      } else {
-        moreText.style.display = "none";
-        btnText.innerHTML = "Learn More";
-      }
-    }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('animate-from-left'); // Add animation trigger class
+              entry.target.classList.remove('slide-in-left');
+            }, 500);
+          }
+        });
+      });
+
+      targetElements.forEach((element) => {
+        observer.observe(element); // Observe each element
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const targetElements = document.querySelectorAll('.slide-in-right');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('animate-from-right'); // Add animation trigger class
+              entry.target.classList.remove('slide-in-right');
+            }, 500);
+          }
+        });
+      });
+
+      targetElements.forEach((element) => {
+        observer.observe(element); // Observe each element
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const targetElements = document.querySelectorAll('.slide-in-up');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('animate-from-up'); // Add animation trigger class
+              entry.target.classList.remove('slide-in-up');
+            }, 500);
+          }
+        });
+      });
+
+      targetElements.forEach((element) => {
+        observer.observe(element); // Observe each element
+      });
+    });
   </script>
 </body>
 

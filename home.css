@@ -138,15 +138,80 @@ a:active {
   }
 }
 
+@keyframes slideInFromUp {
+  0% {
+    transform: translateY(-100%);
+    /* Start position (below the screen) */
+    opacity: 0;
+    /* Start invisible */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* End position (original position) */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+    /* Start position (below the screen) */
+    opacity: 0;
+    /* Start invisible */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* End position (original position) */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    /* Start invisible */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* End position (original position) */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
 /* Base state */
-.slide-in {
+.slide-in-bottom,
+.slide-in-left,
+.slide-in-right,
+.slide-in-up {
   opacity: 0;
   /* Keep elements hidden before the animation starts */
 }
 
 /* Apply the animation to the element */
-.animate {
+.animate-from-bottom {
   animation: slideInFromBottom 1.2s ease-out;
+  /* 1s duration and ease-out timing */
+}
+
+.animate-from-up {
+  animation: slideInFromUp 1.2s ease-out;
+  /* 1s duration and ease-out timing */
+}
+
+.animate-from-left {
+  animation: slideInFromLeft 1.2s ease-out;
+  /* 1s duration and ease-out timing */
+}
+
+
+.animate-from-right {
+  animation: slideInFromRight 1.2s ease-out;
   /* 1s duration and ease-out timing */
 }
 
@@ -238,7 +303,7 @@ a:active {
   line-height: 29px;
 }
 
-.learnMoreBtn {
+.discover-project-button {
   font-size: 1.5rem;
   font-weight: 450;
   cursor: pointer;
@@ -256,7 +321,7 @@ a:active {
   transition-timing-function: ease, ease, ease;
 }
 
-.learnMoreBtn:hover {
+.discover-project-button:hover {
   color: rgb(46, 157, 255);
   border-color: rgb(46, 157, 255);
 }
