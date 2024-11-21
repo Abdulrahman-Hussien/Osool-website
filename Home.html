@@ -16,9 +16,8 @@
   <div class="navigation-container">
     <div class="osool-logo"><a href="home.html"><img src="assets/Osool-New-logo-customized.png"></a></div>
     <div class="navigation-menu">
-      <a class="navigation-link" href="home.html">Home</a>
       <div class="dropdown">
-        <a class="navigation-link" href="services.html">Products <i class="arrow down"></i></a>
+        <a class="navigation-link" href="projects.html">Products <i class="arrow down"></i></a>
         <div class="dropdown-content">
           <a href="projects.html">Projects</a>
           <a href="services.html">Services</a>
@@ -28,8 +27,8 @@
         <a class="navigation-link" href="about-us.html">About<i class="arrow down" style="margin-left: 6px;"></i></a>
         <div class="dropdown-content">
           <a href="about-us.html">About us</a>
-          <a href="">Partners</a>
-          <a href="">Our values</a>
+          <a href="about-us.html#our-values">Our values</a>
+          <a href="about-us.html#partners">Partners</a>
         </div>
       </div>
       <a class="navigation-link">Contact us</a>
@@ -160,95 +159,13 @@
         <a href="https://www.linkedin.com/" target="_blank" class="social-link"><img src="assets/linkedin-logo.png"
             width="20" style="margin-right: 5px;">Linkdin</a>
 
-        <a href="mailto:" target="_blank" class="social-link"><img src="assets/email.png" width="20"
+        <a href="mailto:ss@osool-it.com" target="_blank" class="social-link"><img src="assets/email.png" width="20"
             style="margin-right: 5px;">Mail</a>
       </div>
     </div>
     <div style="text-align: center;">Copyright © 2024 OSOOL. All rights reserved.</div>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const targetElements = document.querySelectorAll('.slide-in-bottom');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('animate-from-bottom'); // Add animation trigger class
-              entry.target.classList.remove('slide-in-bottom');
-            }, 500);
-          }
-        });
-      });
-
-      targetElements.forEach((element) => {
-        observer.observe(element); // Observe each element
-      });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const targetElements = document.querySelectorAll('.slide-in-left');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('animate-from-left'); // Add animation trigger class
-              entry.target.classList.remove('slide-in-left');
-            }, 500);
-          }
-        });
-      });
-
-      targetElements.forEach((element) => {
-        observer.observe(element); // Observe each element
-      });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const targetElements = document.querySelectorAll('.slide-in-right');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('animate-from-right'); // Add animation trigger class
-              entry.target.classList.remove('slide-in-right');
-            }, 500);
-          }
-        });
-      });
-
-      targetElements.forEach((element) => {
-        observer.observe(element); // Observe each element
-      });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const targetElements = document.querySelectorAll('.slide-in-up');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('animate-from-up'); // Add animation trigger class
-              entry.target.classList.remove('slide-in-up');
-            }, 500);
-          }
-        });
-      });
-
-      targetElements.forEach((element) => {
-        observer.observe(element); // Observe each element
-      });
-    });
-
-    //Mobile Toggle
-    function toggleMenu() {
-      const menu = document.querySelector('.navbar-menu');
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-    }
-  </script>
+  <script src="dom-script.js"></script>
 </body>
 
 </html>

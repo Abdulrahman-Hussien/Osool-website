@@ -314,7 +314,7 @@ a:active {
 }
 
 .projects-heading {
-  color: white;
+  color: rgb(185, 188, 192);
   font-weight: 650;
   margin-top: 40px;
 }
@@ -346,7 +346,7 @@ a:active {
 }
 
 .project-description {
-  color: rgb(227, 227, 227);
+  color: rgb(185, 188, 192);
   font-size: 1.1rem;
   line-height: 29px;
 }
@@ -384,16 +384,17 @@ a:active {
 .customers-header {
   font-weight: bold;
   text-align: right;
-  color: black;
-  font-size: 60px;
+  color: rgb(18, 51, 78);
+  font-size: 3.8rem;
+  line-height: 3.8rem;
   margin: 2%;
   padding: 20px;
 }
 
 .customers-text {
-  color: black;
-  font-size: 25px;
-  line-height: 25px;
+  color: rgb(18, 51, 78);
+  font-size: 1.4rem;
+  line-height: 1.4rem;
   text-align: right;
   margin: 20px;
 }
@@ -422,6 +423,7 @@ a:active {
   padding-right: 5px;
   padding-bottom: 35px;
   display: grid;
+  color: rgb(18, 51, 78);
 }
 
 .footer-columns {
