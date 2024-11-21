@@ -102,7 +102,7 @@ a:active {
 }
 
 .navigation-link {
-  font-size: 25px;
+  font-size: 1.1rem;
   color: rgb(106, 133, 156);
   transition-property: all;
   transition-duration: 300ms;

@@ -271,6 +271,24 @@ a:active {
 
 .partners {
   padding: 20px;
+  color: rgb(11, 31, 49);
+  text-align: center;
+}
+
+.partners-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.partners-text {
+  text-align: center;
+  font-size: 1.7rem;
+  color: rgb(18, 51, 78);
+}
+
+.partners-logo img {
+  width: 40%;
 }
 
 .footer-container {
