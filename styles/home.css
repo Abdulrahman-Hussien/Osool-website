@@ -171,99 +171,6 @@ a:active {
   color: rgb(46, 157, 255);
 }
 
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100%);
-    /* Start position (below the screen) */
-    opacity: 0;
-    /* Start invisible */
-  }
-
-  100% {
-    transform: translateY(0);
-    /* End position (original position) */
-    opacity: 1;
-    /* Fully visible */
-  }
-}
-
-@keyframes slideInFromUp {
-  0% {
-    transform: translateY(-100%);
-    /* Start position (below the screen) */
-    opacity: 0;
-    /* Start invisible */
-  }
-
-  100% {
-    transform: translateY(0);
-    /* End position (original position) */
-    opacity: 1;
-    /* Fully visible */
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(100%);
-    /* Start position (below the screen) */
-    opacity: 0;
-    /* Start invisible */
-  }
-
-  100% {
-    transform: translateX(0);
-    /* End position (original position) */
-    opacity: 1;
-    /* Fully visible */
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-    /* Start invisible */
-  }
-
-  100% {
-    transform: translateX(0);
-    /* End position (original position) */
-    opacity: 1;
-    /* Fully visible */
-  }
-}
-/* Base state */
-.slide-in-bottom,
-.slide-in-left,
-.slide-in-right,
-.slide-in-up {
-  opacity: 0;
-  /* Keep elements hidden before the animation starts */
-}
-
-/* Apply the animation to the element */
-.animate-from-bottom {
-  animation: slideInFromBottom 1.2s ease-out;
-  /* 1s duration and ease-out timing */
-}
-
-.animate-from-up {
-  animation: slideInFromUp 1.2s ease-out;
-  /* 1s duration and ease-out timing */
-}
-
-.animate-from-left {
-  animation: slideInFromLeft 1.2s ease-out;
-  /* 1s duration and ease-out timing */
-}
-
-
-.animate-from-right {
-  animation: slideInFromRight 1.2s ease-out;
-  /* 1s duration and ease-out timing */
-}
-
 .section-heading,
 .projects-heading {
   margin-top: 50px;
@@ -448,4 +355,104 @@ a:active {
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.social-link:hover {
+  color: rgb(185, 185, 240);
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    /* Start position (below the screen) */
+    opacity: 0;
+    /* Start invisible */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* End position (original position) */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@keyframes slideInFromUp {
+  0% {
+    transform: translateY(-100%);
+    /* Start position (below the screen) */
+    opacity: 0;
+    /* Start invisible */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* End position (original position) */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+    /* Start position (below the screen) */
+    opacity: 0;
+    /* Start invisible */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* End position (original position) */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    /* Start invisible */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* End position (original position) */
+    opacity: 1;
+    /* Fully visible */
+  }
+}
+/* Base state */
+.slide-in-bottom,
+.slide-in-left,
+.slide-in-right,
+.slide-in-up {
+  opacity: 0;
+  /* Keep elements hidden before the animation starts */
+}
+
+/* Apply the animation to the element */
+.animate-from-bottom {
+  animation: slideInFromBottom 1.2s ease-out;
+  /* 1s duration and ease-out timing */
+}
+
+.animate-from-up {
+  animation: slideInFromUp 1.2s ease-out;
+  /* 1s duration and ease-out timing */
+}
+
+.animate-from-left {
+  animation: slideInFromLeft 1.2s ease-out;
+  /* 1s duration and ease-out timing */
+}
+
+
+.animate-from-right {
+  animation: slideInFromRight 1.2s ease-out;
+  /* 1s duration and ease-out timing */
 }
