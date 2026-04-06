@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Osool IT</title>
-  <link rel="stylesheet" href="styles/contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Osool | Scale With AI</title>
+  
+  <meta name="description" content="Reach out to Osool to intelligently scale your business operations today through our automated software platforms.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/home.css">
+  <style>
+    .standalone-contact {
+      padding: 150px 5% 100px 5%;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at 50% 0%, rgba(46, 157, 255, 0.15), transparent 60%);
+    }
+    
+    .contact-container {
+      margin: 0 auto;
+      max-width: 1000px;
+      width: 100%;
+    }
+  </style>
 </head>
+<body class="dark-theme">
 
-<body>
-  <div class="navigation-container">
-    <div class="osool-logo"><a href="index.html"><img src="assets/Osool-New-logo-customized.png"></a></div>
-    <div class="navigation-menu">
+  <!-- Navigation -->
+  <header class="navigation-container" id="navbar">
+    <div class="osool-logo">
+      <a href="index.html">
+        <img src="assets/Osool-New-logo-customized.png" alt="Osool Logo" class="logo-image-nav">
+      </a>
+    </div>
+    
+    <nav class="navigation-menu desktop-menu">
       <div class="dropdown">
         <a class="navigation-link" href="projects.html">Products <i class="arrow down"></i></a>
         <div class="dropdown-content">
@@ -18,73 +46,88 @@
         </div>
       </div>
       <div class="dropdown">
-        <a class="navigation-link" href="about-us.html">About<i class="arrow down" style="margin-left: 6px;"></i></a>
+        <a class="navigation-link" href="about-us.html">About <i class="arrow down"></i></a>
         <div class="dropdown-content">
           <a href="about-us.html">About us</a>
           <a href="about-us.html#our-values">Our values</a>
-          <a href="about-us.html#partners">Partners</a>
+
         </div>
       </div>
-      <a class="navigation-link" href="contact.html">Contact us</a>
+      <a class="navigation-link cta-nav" href="contact.html">Get Started</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" id="mobile-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </div>
 
-  <div class="center-section"><span class="text-heading">Contact us</span></div>
+    <!-- Mobile Menu -->
+    <nav class="navigation-menu mobile-menu" id="mobile-menu">
+      <a class="navigation-link" href="projects.html">Products</a>
+      <a class="navigation-link" href="services.html">Services</a>
+      <a class="navigation-link" href="about-us.html">About</a>
+      <a class="navigation-link cta-nav" href="contact.html">Get Started</a>
+    </nav>
+  </header>
 
-  <div class="container">
-    <h2 class="section-heading slide-in-bottom">Reach us at anytime!</h2>
-    <div class="contact-container">
-
-      <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form id="contactForm" action="https://formspree.io/f/xldgjwvy" method="POST">
+  <!-- High-Conversion Contact Form -->
+  <section class="standalone-contact">
+    <div class="contact-container reveal">
+      <div class="contact-text">
+        <h2 style="font-size: 3.5rem;">Ready to scale with <span>AI</span>?</h2>
+        <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 400px;">Plug your enterprise into our data network. Reach out to our intelligence specialists today.</p>
+      </div>
+      <div class="contact-form-wrapper">
+        <form class="sleek-form" action="https://formspree.io/f/xldgjwvy" method="POST">
           <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required placeholder=" ">
+            <label for="name">Your Name</label>
           </div>
           <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder=" ">
+            <label for="email">Corporate Email</label>
           </div>
           <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Transmission Details</label>
           </div>
-          <button type="submit">Send Message</button>
+          <button type="submit" class="btn-primary form-submit">Initialize Contact</button>
         </form>
-        <p id="formMessage"></p>
       </div>
-
     </div>
-  </div>
+  </section>
 
-  <div class="footer-container">
+  <!-- Footer -->
+  <footer class="footer-container">
     <div class="footer-columns">
-      <div>
-        <h1>About us</h1>
-        <p class="footer-about-us">Osool is a leading technology company in the MENA region, specializing in delivering
-          customized Business
-          Intelligence (BI) solutions that meet the unique needs of our clients.</p>
+      <div class="footer-brand">
+        <img src="assets/Osool-New-logo-customized.png" alt="Osool Logo" class="footer-logo">
+        <p class="footer-about-us">Leading technology solutions in the MENA region, specializing in advanced AI workflows.</p>
       </div>
-      <div class="footer-osool">
-        <img src="assets/Osool-New-logo-customized.png" style="width: 60%;">
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="projects.html" class="footer-link">Projects</a>
+        <a href="services.html" class="footer-link">Services</a>
+        <a href="about-us.html" class="footer-link">About Us</a>
       </div>
-      <div>
-        <h1>Social</h1>
-        <a href="https://facebook.com" class="social-link" target="_blank"><img src="assets/facebook-logo.svg"
-            width="20" style="margin-right: 5px;">Facebook</a>
 
-        <a href="https://www.linkedin.com/" target="_blank" class="social-link"><img src="assets/linkedin-logo.png"
-            width="20" style="margin-right: 5px;">Linkedin</a>
-
-        <a href="mailto:ss@osool-it.com" target="_blank" class="social-link"><img src="assets/email.png" width="20"
-            style="margin-right: 5px;">Mail</a>
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" class="social-item"><img src="assets/facebook-logo.svg" alt="Facebook"></a>
+          <a href="https://www.linkedin.com/" target="_blank" class="social-item"><img src="assets/linkedin-logo.png" alt="LinkedIn"></a>
+          <a href="mailto:ss@osool-it.com" target="_blank" class="social-item"><img src="assets/email.png" alt="Mail"></a>
+        </div>
       </div>
     </div>
-    <div style="text-align: center;">Copyright © 2024 OSOOL. All rights reserved.</div>
-  </div>
-  <script src="dom-script.js"></script>
-  <script src="contact-script.js"></script>
-</body>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2024 OSOOL. All rights reserved.</p>
+    </div>
+  </footer>
 
+  <script src="dom-script.js"></script>
+</body>
 </html>

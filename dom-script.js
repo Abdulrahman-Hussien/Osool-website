@@ -1,81 +1,74 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const targetElements = document.querySelectorAll('.slide-in-bottom');
+  
+  // Sticky Navbar background color toggle
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 
-  const observer = new IntersectionObserver((entries) => {
+  // Mobile Menu Toggle
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+
+  if (mobileToggle) {
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    });
+  }
+
+  // Scroll Reveal Animations
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('animate-from-bottom'); // Add animation trigger class
-          entry.target.classList.remove('slide-in-bottom');
-        }, 500);
+        entry.target.classList.add('active');
+        // observer.unobserve(entry.target); // Un-comment if animation should only happen once
       }
     });
+  }, {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
   });
 
-  targetElements.forEach((element) => {
-    observer.observe(element); // Observe each element
+  reveals.forEach(reveal => {
+    revealOnScroll.observe(reveal);
   });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  const targetElements = document.querySelectorAll('.slide-in-left');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
+  // Contact Form Submission (Mock)
+  const contactForm = document.getElementById('contactHomeForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = contactForm.querySelector('button[type="submit"]');
+      const originalText = btn.innerText;
+      btn.innerText = "Sending...";
+      btn.style.opacity = '0.8';
+      
+      setTimeout(() => {
+        btn.innerText = "Message Sent!";
+        btn.style.background = "#00c853";
+        contactForm.reset();
+        
+        // Reset button after 3 seconds
         setTimeout(() => {
-          entry.target.classList.add('animate-from-left'); // Add animation trigger class
-          entry.target.classList.remove('slide-in-left');
-        }, 500);
-      }
+          btn.innerText = originalText;
+          btn.style.background = ""; // revert to css variable
+          btn.style.opacity = '1';
+        }, 3000);
+      }, 1500);
     });
-  });
+  }
 
-  targetElements.forEach((element) => {
-    observer.observe(element); // Observe each element
-  });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const targetElements = document.querySelectorAll('.slide-in-right');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('animate-from-right'); // Add animation trigger class
-          entry.target.classList.remove('slide-in-right');
-        }, 500);
-      }
-    });
-  });
-
-  targetElements.forEach((element) => {
-    observer.observe(element); // Observe each element
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const targetElements = document.querySelectorAll('.slide-in-up');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('animate-from-up'); // Add animation trigger class
-          entry.target.classList.remove('slide-in-up');
-        }, 500);
-      }
-    });
-  });
-
-  targetElements.forEach((element) => {
-    observer.observe(element); // Observe each element
-  });
-});
-
-//Mobile Toggle
-function toggleMenu() {
-  const menu = document.querySelector('.navbar-menu');
-  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-}

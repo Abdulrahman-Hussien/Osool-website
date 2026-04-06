@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Osool IT</title>
-  <link rel="stylesheet" href="styles/services.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osool IT | AI Services & Automation</title>
+  
+  <meta name="description" content="Osool's core enterprise services: AI Backend Development, Intelligent ERP, Predictive Power BI, and Automated Business Systems.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/home.css">
 </head>
+<body class="dark-theme">
 
-<body>
-  <div class="navigation-container">
-    <div class="osool-logo"><a href="index.html"><img src="assets/Osool-New-logo-customized.png"></a></div>
-    <div class="navigation-menu">
+  <!-- Navigation -->
+  <header class="navigation-container" id="navbar">
+    <div class="osool-logo">
+      <a href="index.html">
+        <img src="assets/Osool-New-logo-customized.png" alt="Osool Logo" class="logo-image-nav">
+      </a>
+    </div>
+    
+    <nav class="navigation-menu desktop-menu">
       <div class="dropdown">
         <a class="navigation-link" href="projects.html">Products <i class="arrow down"></i></a>
         <div class="dropdown-content">
@@ -18,77 +31,123 @@
         </div>
       </div>
       <div class="dropdown">
-        <a class="navigation-link" href="about-us.html">About<i class="arrow down" style="margin-left: 6px;"></i></a>
+        <a class="navigation-link" href="about-us.html">About <i class="arrow down"></i></a>
         <div class="dropdown-content">
           <a href="about-us.html">About us</a>
           <a href="about-us.html#our-values">Our values</a>
-          <a href="about-us.html#partners">Partners</a>
+
         </div>
       </div>
-      <a class="navigation-link" href="contact.html">Contact us</a>
-    </div>
-  </div>
-  <div class="center-section"><span class="text-heading">Services</span></div>
+      <a class="navigation-link cta-nav" href="contact.html">Get Started</a>
+    </nav>
 
-  <div class="what-we-do-container slide-in-bottom">
-    <div class="white-box">
-      <img class="grid-image" src="assets/invoice-icon.png">
-      <h3>E-invoicing System</h3>
-      <p class="card-description">Osool provide seamless E-invoicing solutions designed to simplify your invoicing process, ensure compliance, and enhance operational efficiency. Our platform integrates effortlessly with your existing systems, creating commercial invoices, crafting price schemas, and submitting the e-invoices on the tax portal ensureing compliance with local and global E-invoicing regulations. Reduce manual errors, save costs, and accelerate payment cycles. With our tailored solutions streamline workflows and stay ahead in the digital economy.</p>
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" id="mobile-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="white-box">
-      <img class="grid-image" style="width: 57%;" src="assets/backend-icon.png">
-      <h3>Back-End App Development</h3>
-      <p class="card-description">Delivering robust and scalable backend development solutions that power seamless user experiences. Our team of experts excels in building secure APIs, managing databases, and optimizing server-side performance using cutting-edge technologies like Node.js, Python, Java Spring Boot, and PHP. Whether it's creating custom architectures, integrating systems, or ensuring high availability, we are committed to delivering backend solutions that drive reliability and efficiency for your applications.</p>
-    </div>
-    <div class="white-box">
-      <img class="grid-image" src="assets/erp-icon.png">
-      <h3>ERP Consultation</h3>
-      <p class="card-description">Osool provide expert ERP consultancy services to help business streamline operations, improve efficiency and drive growth with a team of 20+ years of experience in different ERP systems like SAP, Oracle, and JD Edwards. Our team offers both expert consultation and implemention services. From system selection and integration to training and ongoing support, our team ensures a seamless transition and maximum ROI.</p>
-    </div>
-    <div class="white-box">
-      <img class="grid-image" src="assets/power-bi.png">
-      <h3>Power BI Solutions</h3>
-      <p class="card-description">Empowering businesses to make data-driven decisions with cutting-edge Business Intelligence (BI) solutions. Specializing in tools like Power BI, we transform complex data into clear, actionable insights through interactive dashboards and dynamic reporting. Whether you're streamlining operations, identifying trends, or uncovering growth opportunities, our tailored BI solutions provide the clarity and confidence you need to succeed.</p>
-    </div>
-    <div class="white-box">
-      <img class="grid-image" src="assets/automation-icon.png">
-      <h3>System Management & Automation</h3>
-      <p class="card-description">Osool excels in creating and managing advanced systems while delivering cutting-edge automation solutions to optimize your business operations. From designing tailored systems to integrating AI-driven automation, we help streamline processes, reduce manual effort, and improve efficiency across your organization. Our expertise spans system architecture, workflow automation, and ongoing management to ensure seamless functionality and scalability.</p>
-    </div>
-    <div class="white-box">
-      <img class="grid-image" src="assets/web-icon.png">
-      <h3>Front-End Web Development</h3>
-      <p class="card-description">With expertise in HTML, CSS, JS, and modern frameworks, Osool is dedicated to craft visually stunning, user-friendly, and responsive websites that bring ideas to life. Whether it's building from scratch or enhancing existing designs, Osool thrives on delivering creative and innovative solutions that leave a lasting impression.</p>
+
+    <!-- Mobile Menu -->
+    <nav class="navigation-menu mobile-menu" id="mobile-menu">
+      <a class="navigation-link" href="projects.html">Products</a>
+      <a class="navigation-link" href="services.html">Services</a>
+      <a class="navigation-link" href="about-us.html">About</a>
+      <a class="navigation-link cta-nav" href="contact.html">Get Started</a>
+    </nav>
+  </header>
+
+  <div class="hero-section" style="min-height: 40vh; display: flex; align-items: flex-end; padding-bottom: 50px;">
+    <div class="hero-background-fx"></div>
+    <div class="hero-content reveal">
+      <h1 class="text-heading" style="font-size: 4rem;">Intelligent <span>Services</span></h1>
+      <p class="hero-subtext">Architecting automated, predictive environments tailored for your corporate dominance.</p>
     </div>
   </div>
 
-  <div class="footer-container">
+  <section class="services-section" style="padding-top: 50px;">
+    <div class="what-we-do-container">
+      
+      <div class="glass-box reveal">
+        <div class="icon-wrapper">
+          <img class="grid-image" src="assets/invoice-icon.png" alt="AI Invoicing">
+        </div>
+        <h3>Smart Automated E-Invoicing</h3>
+        <p class="card-description">AI-driven invoicing algorithms configured to dynamically interpret and route regional tax portal documentation. Our secure, localized machine logic ensures compliance, drastically reducing human error and latency.</p>
+      </div>
+      
+      <div class="glass-box reveal delay-1">
+        <div class="icon-wrapper">
+          <img class="grid-image" src="assets/backend-icon.png" alt="AI Backend">
+        </div>
+        <h3>AI-Driven Back-End Infrastructures</h3>
+        <p class="card-description">Deploying scalable AI-ready backend infrastructures utilizing cloud-native deployments via Node.js, Python, and Java Spring. We build API clusters ready for machine-learning payload delivery and secure intelligence processing.</p>
+      </div>
+
+      <div class="glass-box reveal delay-2">
+        <div class="icon-wrapper">
+          <img class="grid-image" src="assets/erp-icon.png" alt="ERP">
+        </div>
+        <h3>Cognitive ERP Consultation</h3>
+        <p class="card-description">Integrating heavy AI logic layers over legacy ERP domains like SAP and Oracle. With decades of predictive analytics experience, we reconstruct fragmented corporate logic into centralized brains capable of rapid data extraction.</p>
+      </div>
+      
+      <div class="glass-box reveal">
+        <div class="icon-wrapper">
+          <img class="grid-image" src="assets/power-bi.png" alt="Power BI AI">
+        </div>
+        <h3>Predictive Power BI Solutions</h3>
+        <p class="card-description">Advanced mathematical clustering merged directly with Power BI dashboards. Through our solutions, vast ocean variables are transformed into real-time forecasting charts, alerting executives to critical metrics autonomously.</p>
+      </div>
+      
+      <div class="glass-box reveal delay-1">
+        <div class="icon-wrapper">
+          <img class="grid-image" src="assets/automation-icon.png" alt="Automation">
+        </div>
+        <h3>Total Business Automation (RPA/AI)</h3>
+        <p class="card-description">Removing organic bottlenecks permanently by installing autonomous digital workflows. We deploy robotic process automation supervised by LLM decision models that drastically out-work legacy constraints.</p>
+      </div>
+      
+      <div class="glass-box reveal delay-2">
+        <div class="icon-wrapper">
+          <img class="grid-image" src="assets/web-icon.png" alt="Frontend">
+        </div>
+        <h3>Futuristic Front-End Solutions</h3>
+        <p class="card-description">Visually aggressive and responsive interface designs tuned by consumer psychology tracking. Every interactive vector serves a hyper-optimized goal to accelerate sales conversion funnels.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-container">
     <div class="footer-columns">
-      <div>
-        <h1>About us</h1>
-        <p class="footer-about-us">Osool is a leading technology company in the MENA region, specializing in delivering
-          customized Business
-          Intelligence (BI) solutions that meet the unique needs of our clients.</p>
+      <div class="footer-brand">
+        <img src="assets/Osool-New-logo-customized.png" alt="Osool Logo" class="footer-logo">
+        <p class="footer-about-us">Leading technology solutions in the MENA region, specializing in advanced AI workflows.</p>
       </div>
-      <div class="footer-osool">
-        <img src="assets/Osool-New-logo-customized.png" style="width: 60%;">
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="projects.html" class="footer-link">Projects</a>
+        <a href="services.html" class="footer-link">Services</a>
+        <a href="about-us.html" class="footer-link">About Us</a>
       </div>
-      <div>
-        <h1>Social</h1>
-        <a href="https://facebook.com" class="social-link" target="_blank"><img src="assets/facebook-logo.svg"
-            width="20" style="margin-right: 5px;">Facebook</a>
 
-        <a href="https://www.linkedin.com/" target="_blank" class="social-link"><img src="assets/linkedin-logo.png"
-            width="20" style="margin-right: 5px;">Linkedin</a>
-
-        <a href="mailto:ss@osool-it.com" target="_blank" class="social-link"><img src="assets/email.png" width="20"
-            style="margin-right: 5px;">Mail</a>
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" class="social-item"><img src="assets/facebook-logo.svg" alt="Facebook"></a>
+          <a href="https://www.linkedin.com/" target="_blank" class="social-item"><img src="assets/linkedin-logo.png" alt="LinkedIn"></a>
+          <a href="mailto:ss@osool-it.com" target="_blank" class="social-item"><img src="assets/email.png" alt="Mail"></a>
+        </div>
       </div>
     </div>
-    <div style="text-align: center;">Copyright © 2024 OSOOL. All rights reserved.</div>
-  </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2024 OSOOL. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script src="dom-script.js"></script>
 </body>
-
 </html>

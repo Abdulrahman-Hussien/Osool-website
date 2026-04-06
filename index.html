@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Osool IT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osool IT | Data-Driven Innovation</title>
+
+  <!-- SEO tags -->
+  <meta name="description"
+    content="Osool specializes in designing and implementing fully customized, data-driven applications tailored to accelerate business growth.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/home.css">
 </head>
 
-<body>
-  <div class="navigation-container">
-    <div class="osool-logo"><a href="index.html"><img src="assets/Osool-New-logo-customized.png"></a></div>
-    <div class="navigation-menu">
+<body class="dark-theme">
+
+  <!-- Navigation -->
+  <header class="navigation-container" id="navbar">
+    <div class="osool-logo">
+      <a href="index.html">
+        <img src="assets/Osool-New-logo-customized.png" alt="Osool Logo" class="logo-image-nav">
+      </a>
+    </div>
+
+    <nav class="navigation-menu desktop-menu">
       <div class="dropdown">
         <a class="navigation-link" href="projects.html">Products <i class="arrow down"></i></a>
         <div class="dropdown-content">
@@ -22,149 +37,184 @@
         </div>
       </div>
       <div class="dropdown">
-        <a class="navigation-link" href="about-us.html">About<i class="arrow down" style="margin-left: 6px;"></i></a>
+        <a class="navigation-link" href="about-us.html">About <i class="arrow down"></i></a>
         <div class="dropdown-content">
           <a href="about-us.html">About us</a>
           <a href="about-us.html#our-values">Our values</a>
-          <a href="about-us.html#partners">Partners</a>
+
         </div>
       </div>
-      <a class="navigation-link" href="contact.html">Contact us</a>
-    </div>
-  </div>
+      <a class="navigation-link cta-nav" href="#contact-section">Get Started</a>
+    </nav>
 
-  <div class="center-section">
-    <span class="text-heading">Data-Driven Innovation for Tomorrow</span>
-    <div>
-      <a href="about-us.html" class="learn-more-button">About Osool</a>
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" id="mobile-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </div>
 
-  <h2 class="section-heading">WHAT WE DO</h2>
-  <div class="what-we-do-container slide-in-bottom">
-    <div class="white-box">
-      <img class="grid-image" src="assets/hardware-icon-9.png">
-      <h3>High-Tech Applications</h3>
-      <p class="card-description">Osool specializes in desgining and implementing cutting-edge, fully customized
-        applications tailored to meet the customer's unique needs to accelerate business growth and drive sustainable
-        success.</p>
-    </div>
-    <div class="white-box">
-      <img class="grid-image" src="assets/stock.png" style="padding-bottom: 29px;">
-      <h3>Data-Driven Improvements</h3>
-      <p class="card-description">Our services provide real-time business improvements driven by data analytics, market
-        research, and advanced technology solutions. Delivered by a team of experts in the field of data analysis.</p>
-    </div>
-    <div class="white-box">
-      <img class="grid-image" src="assets/deal.png">
-      <h3>Technical Support & Consultation</h3>
-      <p class="card-description">Osool provides ongoing support and consultation services to ensure our customers'
-        success long after implementation.</p>
-    </div>
-  </div>
+    <!-- Mobile Menu -->
+    <nav class="navigation-menu mobile-menu" id="mobile-menu">
+      <a class="navigation-link" href="projects.html">Products</a>
+      <a class="navigation-link" href="services.html">Services</a>
+      <a class="navigation-link" href="about-us.html">About</a>
+      <a class="navigation-link cta-nav" href="#contact-section">Get Started</a>
+    </nav>
+  </header>
 
-  <div class="projects-background">
-    <h1 class="projects-heading">Projects</h1>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background-fx"></div>
+    <div class="hero-content fade-in-up">
+      <h1 class="text-heading">Data-Driven <span>Innovation</span> for Tomorrow</h1>
+      <p class="hero-subtext">Tailored tech solutions accelerating business growth and driving sustainable success.</p>
+      <div class="hero-actions">
+        <a href="#contact-section" class="btn-primary">Get Started</a>
+        <a href="about-us.html" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / What We Do -->
+  <section class="services-section" id="services">
+    <h2 class="section-heading reveal">What We Do</h2>
+    <div class="what-we-do-container">
+
+      <div class="glass-box reveal">
+        <div class="icon-wrapper">
+          <img class="grid-image" src="assets/hardware-icon-9.png" alt="High-Tech Applications">
+        </div>
+        <h3>High-Tech Applications</h3>
+        <p class="card-description">Osool specializes in designing and implementing cutting-edge, fully customized
+          applications tailored to your unique needs.</p>
+      </div>
+
+      <div class="glass-box reveal delay-1">
+        <div class="icon-wrapper">
+          <img class="grid-image" src="assets/stock.png" alt="Data-Driven Improvements">
+        </div>
+        <h3>Data-Driven Improvements</h3>
+        <p class="card-description">Real-time business upgrades driven by analytics, market research, and advanced
+          technology solutions delivered by experts.</p>
+      </div>
+
+      <div class="glass-box reveal delay-2">
+        <div class="icon-wrapper">
+          <img class="grid-image" src="assets/deal.png" alt="Technical Support">
+        </div>
+        <h3>Support & Consultation</h3>
+        <p class="card-description">Ongoing support and expert consultation services to ensure long-term success well
+          after implementation.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects Showcase -->
+  <section class="projects-section reveal">
+    <div class="projects-background-blur"></div>
+    <h2 class="projects-heading">Featured Projects</h2>
+
     <div class="projects-container">
-      <div class="project-column">
-        <img src="assets/project1-icon.jpg">
+      <div class="project-column project-image-wrapper reveal slide-in-left">
+        <div class="image-glow"></div>
+        <img src="assets/project1-icon.jpg" alt="Sales-Flow Application" class="project-image">
       </div>
-      <div>
-        <h2 class="project-title">Sales-Flow Application</h2>
-        <div class="project-description slide-in-left">
-          <p>Osool's innovative system is designed to manage and streamline the entire
-            sales cycle, transforming raw data into actionable insights. This system is built with a focus on
-            efficiency,
-            accessibility, and adaptability, ensuring clients have all they need to make informed decisions. Here is how
-            it
-            works:</p>
-
-          <ul>
-            <li><strong>Comprehensive Sales Cycle Management</strong>: Osool developed a system that manages the entire
-              sales cycle, ensuring a seamless flow from data collection to actionable insights.</li>
-
-            <li><strong>Backend Data Collection</strong>: The system begins with a robust backend application that
-              gathers data from various sources</li>
+      <div class="project-content reveal slide-in-right">
+        <h3 class="project-title">Sales-Flow Application</h3>
+        <div class="project-description">
+          <p>An innovative system designed to manage and streamline the entire sales cycle, transforming raw data into
+            actionable insights.</p>
+          <ul class="feature-list">
+            <li><strong>Cycle Management</strong>: Seamless flow from data collection to insights.</li>
+            <li><strong>Backend Data</strong>: Robust gathering from varying sources.</li>
           </ul>
-          <a href="projects.html#Sales_Flow"><button class="discover-project-button">Discover our Sales-Flow
-              Application</button></a>
+          <a href="projects.html#Sales_Flow" class="btn-outline">Discover Platform</a>
         </div>
       </div>
     </div>
 
-    <div class="projects-container2">
-      <div>
-        <h2 class="project-title">E-invoicing Application</h2>
-        <div class="project-description slide-in-right">
-          <p>Osool's application offers a seamless, automated solution for managing E-invoices, particularly designed to
-            comply with the Egyptian Tax Portal requirements. This powerful system simplifies invoice processing,
-            validation, and database organization, enhancing efficiency and accuracy for clients.</p>
-
-          <ul>
-            <li><strong>Automatic E-Invoice Transformation</strong>: The application can transform traditional invoices
-              into e-invoices automatically, converting them to a digital format that aligns with tax regulations.</li>
-
-            <li><strong>Direct Integration with Egyptian Tax Portal</strong>: Once the invoices are converted, the
-              application directly connects to the Egyptian Tax Portal to submit the e-invoices for validation, ensuring
-              compliance with local tax laws.</li>
-            <a href="projects.html#e-invoicing"><button class="discover-project-button">Discover our E-invoicing
-                Application</button></a>
+    <div class="projects-container reverse">
+      <div class="project-content reveal slide-in-left">
+        <h3 class="project-title">E-invoicing Portal</h3>
+        <div class="project-description">
+          <p>Seamless, automated solution for managing E-invoices designed perfectly for tax compliance and structural
+            database organization.</p>
+          <ul class="feature-list">
+            <li><strong>Automatic Transformation</strong>: Traditional forms converted effortlessly.</li>
+            <li><strong>Direct Integration</strong>: Submits immediately for rapid validation.</li>
+          </ul>
+          <a href="projects.html#e-invoicing" class="btn-outline">View Details</a>
         </div>
       </div>
-
-      <div class="project-column">
-        <img src="assets/project2-icon.jpg">
+      <div class="project-column project-image-wrapper reveal slide-in-right">
+        <div class="image-glow alt-glow"></div>
+        <img src="assets/project2-icon.jpg" alt="E-invoicing Application" class="project-image">
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="customers-container">
-    <div>
-      <h1 class="customers-header">Our Customers</h1>
-      <p class="customers-text">We are confident we can find the process that will best help you meet your goals. Our
-        tailored solutions are designed to adapt to your unique needs, ensuring sustainable growth and success.</p>
-    </div>
-    <div class="customers-logo slide-in-bottom">
-      <div class="custmoers-logo-box">
-        <img class="logo-image" src="assets/GSK_logo_2022.svg.png">
-      </div>
-      <div class="custmoers-logo-box">
-        <img class="logo-image" src="assets/H_MasterLogo_Colour_POS_RGB.png">
-      </div>
-      <div class="custmoers-logo-box">
-        <img src="assets/smithkline-beecham-hd-logo.png" class="logo-image">
-      </div>
-      <div class="custmoers-logo-box">
-        <img src="assets/modern-pharma-logo.jpeg" class="logo-image">
-      </div>
-    </div>
-  </div>
 
-  <div class="footer-container">
+
+  <!-- Smooth Contact Section -->
+  <section class="contact-section" id="contact-section">
+    <div class="contact-container reveal">
+      <div class="contact-text">
+        <h2>Ready to Innovate?</h2>
+        <p>Drop us a simple message and let's start shaping your tomorrow.</p>
+      </div>
+      <div class="contact-form-wrapper">
+        <form class="sleek-form" id="contactHomeForm">
+          <div class="form-group">
+            <input type="text" id="name" required placeholder=" ">
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" required placeholder=" ">
+            <label for="email">Email Address</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="4" required placeholder=" "></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="btn-primary form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-container">
     <div class="footer-columns">
-      <div>
-        <h1>About us</h1>
-        <p class="footer-about-us">Osool is a leading technology company in the MENA region, specializing in delivering
-          customized Business
-          Intelligence (BI) solutions that meet the unique needs of our clients.</p>
+      <div class="footer-brand">
+        <img src="assets/Osool-New-logo-customized.png" alt="Osool Logo" class="footer-logo">
+        <p class="footer-about-us">Leading technology solutions in the MENA region, specializing in advanced BI
+          workflows.</p>
       </div>
-      <div class="footer-osool">
-        <img src="assets/Osool-New-logo-customized.png" style="width: 60%;">
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="projects.html" class="footer-link">Projects</a>
+        <a href="services.html" class="footer-link">Services</a>
+        <a href="about-us.html" class="footer-link">About Us</a>
       </div>
-      <div>
-        <h1>Social</h1>
-        <a href="https://facebook.com" class="social-link" target="_blank"><img src="assets/facebook-logo.svg"
-            width="20" style="margin-right: 5px;">Facebook</a>
 
-        <a href="https://www.linkedin.com/" target="_blank" class="social-link"><img src="assets/linkedin-logo.png"
-            width="20" style="margin-right: 5px;">Linkedin</a>
-
-        <a href="mailto:ss@osool-it.com" target="_blank" class="social-link"><img src="assets/email.png" width="20"
-            style="margin-right: 5px;">Mail</a>
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/company/osool-it/" target="_blank" class="social-item"><img
+              src="assets/linkedin-logo.png" alt="LinkedIn"></a>
+          <a href="mailto:abdulrahman.hussein@osool-it.com" target="_blank" class="social-item"><img
+              src="assets/email.png" alt="Mail"></a>
+        </div>
       </div>
     </div>
-    <div style="text-align: center;">Copyright © 2024 OSOOL. All rights reserved.</div>
-  </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2026 OSOOL. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script src="dom-script.js"></script>
 </body>
 
