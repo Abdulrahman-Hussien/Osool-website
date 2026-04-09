@@ -80,7 +80,8 @@
         <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 400px;">Plug your enterprise into our data network. Reach out to our intelligence specialists today.</p>
       </div>
       <div class="contact-form-wrapper">
-        <form class="sleek-form" action="https://formspree.io/f/xldgjwvy" method="POST">
+        <form class="sleek-form" id="contactForm" action="https://formsubmit.co/abdulrahm.hussien@osool-it.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-group">
             <input type="text" id="name" name="name" required placeholder=" ">
             <label for="name">Your Name</label>
@@ -94,6 +95,7 @@
             <label for="message">Transmission Details</label>
           </div>
           <button type="submit" class="btn-primary form-submit">Initialize Contact</button>
+          <div id="formMessage" style="margin-top: 15px; font-weight: 500; text-align: center;"></div>
         </form>
       </div>
     </div>
@@ -129,5 +131,6 @@
   </footer>
 
   <script src="dom-script.js"></script>
+  <script src="contact-script.js"></script>
 </body>
 </html>
