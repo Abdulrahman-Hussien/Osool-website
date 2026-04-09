@@ -29,7 +29,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
   formMessage.textContent = '';
   
   // Submit the form using FormSubmit via AJAX
-  fetch("https://formsubmit.co/ajax/abdulrahm.hussien@osool-it.com", {
+  fetch("https://formsubmit.co/ajax/abdulrahman.hussein@osool-it.com", {
     method: "POST",
     headers: { 
         'Content-Type': 'application/json',

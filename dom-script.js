@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.style.opacity = '0.8';
       if (formMessage) formMessage.textContent = '';
       
-      fetch('https://formsubmit.co/ajax/abdulrahm.hussien@osool-it.com', {
+      fetch('https://formsubmit.co/ajax/abdulrahman.hussein@osool-it.com', {
         method: 'POST',
         headers: { 
             'Content-Type': 'application/json',
